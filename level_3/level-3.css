@@ -1,0 +1,75 @@
+#parent{
+height: 100px;
+width: 200px;
+background-color: aqua;
+font-size: 10px;
+}
+#child{
+width: 30%;
+background-color: yellow;
+margin-left: 10%;
+font-size: 0.5em;
+font-size: 2em;  
+/* 20px */
+width: 5em;
+/* 20*5 = 100px */
+width: 5rem;
+height: 50vh;
+height: 100vh;
+width: 1vw; 
+}
+div{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: inline-block;
+}
+#box-1{
+position: static;
+top: 50px;
+background-color: red;
+background-image: url(image/food-3.jpg);
+background-size: cover;
+background-size: contain;
+background-repeat: no-repeat;
+}
+#box-2{
+    position: relative;
+    top: -20px;
+    left: 25px;
+    background-color: green;
+    z-index: 1;
+}
+#box-3{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    top: 500px;
+    background-color: bisque;
+}
+#box-4{
+    background-color: plum;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+}
+#box-5{
+    position: sticky;
+    background-color: blue;
+    top: 0;
+    z-index: -3;
+}
+/* ----------PRACTICE SET 5 -------------- */
+#practice-set{
+    height: 100px;
+    width: 400px;
+    background-image: url("image/food-3.jpg");
+    background-size: cover;
+    color: #fff;
+    border-radius: 5px;
+    position: fixed;
+    /* browser window relative */
+    right: 0px;
+    top: 50px;
+}
