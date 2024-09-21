@@ -1,0 +1,521 @@
+CSS is used to add styles on a website
+CSS stands for Cascading Style Sheet.It is a language that is used to describe the style of a document(HTML).
+We will use VS code (notebook to write code) -> freely available
+html -> basic layout/structure roof,floor,bricks
+css -> style color,size 
+js -> logic switch on off or speed
+to stand premimium -> red and yellow mixture -> happy
+blue -> stability/security bank paypal ptm 
+alignment/font-size -> treat it as an important entity
+---------------------------LEVEL-1----------------------
+---------BASICS OF CSS----------------
+Website is distorted without CSS
+BASIC SYNTAX-------
+(selector) h1 {
+   (property) color: (value)red;            pair of property and value
+}
+semicolon is a statement terminator. In maximum cases it won't show any error if you're writing single property value pair. Writing semicolon is a good practice and it shows that good programmer is writing a code.
+INCLUDING STYLE--------
+There are three methods to include style
+1- INLINE CSS---- to add inline styling in tag 
+    <h1 style="color:red">HELLO FROM FATEHA ALI!</h1>
+you can use color picker to lighten or darken the text
+2- INTERNAL CSS----- style tag method
+3-EXTERNAL STYLESHEET----writing CSS in a separate document and linking it with HTML file(professional/developer/practical way to workout things) -> link CSS file with HTML file
+rel means relation of link that is stylesheet. href means which file do you want to link with it.
+In case inline and external both type of CSS is applied so inline CSS would get preference. When we write a lot of code we may forget where we used inline CSS so External style sheet should be prioritized. Use it only when it's compulsory
+----------COLOR PROPERTY ---------------
+used to set the color of foreground/elements
+color: red;    color: pink;
+---------BACKGROUND COLOR PROPERTY---------
+used to set the color of background
+background-color: green;    background-color: blue; 
+by selecting selector for one time we can add multiple values
+-----------COLOR SYSTEMS-----------
+color theory
+You can search from google color picker
+1- RGB  SYSTEM----- red green blue system -> quantity of color(0-255 0-255 0-255)
+color rgb(255,0,0);
+color rgb(0,255,0);
+2-HEX SYSTEM-------Hexadecimal-> shorter way to write rgb  [hexdec-0-9,a-f digits(total=16)]   [dec-10] [bin-2]
+quantity of color (range -> 00-ff 00-ff 00-ff>
+color: #ff0000;
+color: #00ff00;
+3-HSLA SYSTEM
+to set complex color use color pallet -> use coolers/canva(free, popular ) -> start the generator -> set multiple color
+learn color theory/complimentary color for making projects
+---------------SELECTORS-----------------
+1-UNIVERSAL SELECTOR---------
+style that is set to whole document
+it starts with asterisk(*) *{}
+& mean ampersand
+write it on top of css file to know all the changes made to whole document
+2-ELEMENT SELECTOR----------
+it selects all the elements
+h6{}
+this style would be applied on all h6
+the style given after would be prioritized
+3-ID SELECTOR----------
+we can give id to our specific elements -> we can understand it as unique name
+#myid{}
+shortcut to write if emmet is downloaded -> #myid
+we can give id to multiple elements but it is considered as bad practice in programming
+4-CLASS SELECTOR--------
+To give same style to multiple elements class property is used ()
+.myclass{}
+shortcut to write if emmet is downloaded -> .myclass
+--------PRACTICE SET 1---------
+Q1: Create a simple div with an id "box"
+Add some text content inside the div
+Set it's background color to blue
+Q2: Create 3 headings with h1,h2 and h3
+Give them all a class "heading" and set color of "heading" to red
+Q3: Create a button and set its background color to:
+green using css style sheet ----priority
+blue using style tag       --- high priority
+pink using inline style    --higher priority because it is written aside element.
+This is why it is advised to add styling through one method.
+------------LOREM--------
+general large amount of text in emmet-> abbreviation for random text contains no meaning.
+--------COMMENT-----------
+it is an extra part and doesn't count in code press ctrl+/  
+-----------------------------------TEXT PROPERTIES------------------------------ 
+1- TEXT ALIGN-----------
+direction of a content written on a page. Content placement of the text on page can be controlled through this property
+text-align: left/right/center/start/end
+ lorem*10   -> way to write text  multiple times
+text-align property don't work a/c to whole document and works only according to parent like if parent is body so heading will align itself according to body tag which will be it's parent at that time.
+<div> -> parent <p> -> child </p> </div>  hierarchal relation -> what's in parent goes to child
+It's modification in CSS3
+English/Hindi : left=start right=end
+Urdu : right=start left=end
+2- TEXT DECORATION------------
+lines set on text
+text-decoration: underline/overline/line-through/none
+Tip: You can visit mdn to know about all the properties you want to know.write mdn + property name -> click mozilla.org link to know all about them
+ 3-FONT WEIGHT------------------
+It defines the text written is how much darker or lighter text is
+font-weight: normal/bold/bolder(400 above)/ligher(less than 400)
+font-weight: 100(lightest shade)-900(darkest shade)
+4-FONT FAMILY --------------
+what type of font style text holds
+font-family: arial
+font-family: arial, roboto , Tahoma     multiple font families can be set. If one doesn't exist in that browser other should be prioritized and this is called Fall-back mechanism means if ne fails other applies
+1- GENERIC FONT FAMILIES: are decorative strokes on the ends of letters or cursive strokes
+a- Serif  b-Sans-Serif  c-Cursive(handwriting)  4-Fantasy  5-Monospace
+2-SPECIFIC FONT FAMILIES: are specific fonts with different styles within the one font family name  a- Arial( part of Sans-Serif)    b-Times new roman(part of Serif)   c-Tahoma
+CSS can be set at the browser for any element but they don't reflect n file -> temporary -> they get removed on inspect
+You can search font styles on google to add according to your choice
+------------UNITS IN CSS-----------
+The relation of unit is with size. How much bigger and smaller it should be
+ABSOLUTE UNITS: used to measure size -> have fixed value globally
+PIXELS/FONTSIZE (px)---------- [small part of screen]
+96px = 1 inch = 2.54cm = mm
+font-size: 2px;
+1px is very small and almost disappears on screen 
+LINE HEIGHT--------------
+determines height of line/text
+line-height: 2px
+line-height: normal
+TEXT TRANSFORM-----------
+defines the case of a text
+text-transform: uppercase/lowercase/capitalize/none
+--------PRACTICE SET 2---------
+Q1: Create a heading centered on the page with all of its text capitalized by default.
+Q2:Set the font family of all the content in the document to "Times New Roman"
+Q3: Create one div inside another div.
+set id and text "outer" for the first one and "inner" for the second one.
+set the outer div text size to 25px and inner div text size to 10px.
+tip: all outer properties automatically set to inner
+--------------------LEVEL-2-------------------------------
+------BOX MODEL IN CSS---------
+This model says all the HTML elements are in the form of a box 
+two parts 1-content(element) 2-margin
+a- Height (vertical area space occupied by content)
+By default, it sets the content area height of the element
+div{
+height: 50px;
+}
+b-Width(horizontal area occupied by content)
+By default, it sets the content area width of the element
+div{
+width: 50px;
+}
+tip: Now if we apply text align property so heading will be aligned in center according to the height and width assigned to it instead of the document.
+c-Border (enclosed structure around content)
+used to set an element's border
+border-width:2px;
+border-style: solid/dotted/dashed
+border-color: purple
+---SHORTHAND----
+short way to write three properties in single line
+border: 2px solid brown;
+By default, border colors are set in black color
+---BORDER RADIUS---
+used to round the corners of an element's outer border edge
+border-radius: 10px;
+when the height and width of the div is same and we give it a border radius 50% , it results in a circle.
+border-radius: 50%;
+d-Padding (extra space around content) 
+additional space/distance between boundary and content is called padding
+1-padding-left  -> add space from left
+2-padding-right  -> add space from right
+3-padding-top    -> add space from top
+4-padding-bottom   -> add space from bottom
+----SHORT HAND ---
+padding:50px;(TRBL-> from all four size
+padding: 1px  2px  3px    4px
+         top right bottom left  ->clockwise
+e-Margin (space between two boxes/content)
+area between two boxes border
+margin-right
+margin-left
+margin-top
+margin-bottom
+margin:50px;(TRBL-> from all four size
+margin: 10px  20px  30px  40px
+         top right bottom left  ->clockwise
+--------PRACTICE SET 3---------
+Q1: Create a div with height and width of 100px.
+Set its background color to green and the border radius to  50%.
+Q2: Create the following nav bar.
+
+---------DISPLAY PROPERTY--------------
+
+display: inline(required width occupied)/block(100% width occupied)/inline-block/none
+1-inline: Takes only the space required by the element. (no margin/padding)
+2-block: takes full space available in width
+3-inline-block: similar to/behave like inline but we can set margin and padding, height and width etc. content area will be as per defined
+4-none: to remove element from document flow and other element replaced them(no empty place created for these)
+----------------VISIBILITY-----------
+visibility: hidden;
+Note: When visibility is set to none, space for the element is reserved
+But for display set to none, no space is reserved or blocked for the element.
+--------ALPHA CHANNEL---------
+opacity(0 to 1) -> means how much the color should be displayed(more/less)
+0 means not visible
+1 means to be visible
+RGBA (red green blue alpha)
+color: rgba(255,0,0,0.5)
+color: rgba(255,0,0,0.1)
+----------PRACTICE SET 4 --------------
+Q1: Create a webpage layout with a header, a footer and a content area containing 3 divs.
+Set the height and width of divs to 100px
+(add the previous nav bar in the header)
+Q2: Add borders to all the divs
+Q3: Add a different background color to each div with an opacity of 0.5
+Q4: Give the content area an appropriate height
+tip: you can search copyright and heart code from google
+---------------------------LEVEL-3---------------------------
+-------UNITS IN CSS----------
+Relative -> which isn't fixed for all devices and is different for all devices
+1- % unit -> PERCENTAGE(%)---------
+important unit of measurement in CSS
+It is often used to define a size as relative to an element's parent object.
+width: 33%;
+margin-left: 50%;
+2- em -----------
+em unit is relative to the font size of the parent, in the case of typographical properties like font-size, and font size of the element itself, in the case of other properties like width
+ text related properties
+1 em relative to font size of parent
+box1 100px
+box2 1em means relative to font size of parent
+2em means double the font size of parent element(means two times of parent's font-size)
+0.5 em half of parent's font size
+width: 5em;
+/* 20*5 = 100px */   means 5 times of font-size
+tip: em has properties that contain their own font size. they donot always get size from the parent
+3-rem (root em)------
+rem unit is relative to the font size of the root element (set things a/c to root element fontsize)
+OTHER UNITS----------
+4-vh--------
+relative to 1% viewport height(browser screen part)
+height: 50vh;
+height: 100vh;
+ means to occupy 50 or 100% of browser's height
+5-vw--------
+relative to 1% viewport width
+width: 1vw;
+ means to occupy 1% of browser's width
+------------------POSITIONS--------------------
+The position CSS property sets how an element is positioned in a document.
+position: static/relative/absolute/fixed
+1- STATIC---------
+default position(the top, right, bottom, left, and z-index properties have no effect)
+we can set distances from top, right, left and bottom and even set z-index but they aren't effective in static position.
+2- RELATIVE------
+element is relative to itself.(the top, right, bottom, left and z-index will work)
+shift from boundary it was placed
+3-ABSOLUTE------
+positioned relative to its closest positioned ancestor(all non-static parents/ancestors).(removed from the flow)
+position of element relative to it's closest parent element
+4-FIXED--------
+positioned relative to browser. (removed from flow)
+used for header and navs and it remains fixed on the screen while scrolling
+5-STICKY------
+position based on user's scroll position
+it sticks only till it's real position and not all the time.(sticked box according to scroll)
+it can also be used for navigation bars and headers.
+5- Z-INDEX----------
+It decides the stack level of elements
+Overlapping elements with a larger z-index cover those with a smaller one.
+z-index auto(0)
+z-index: 1/2/... more positive mean more above
+z-index: -1/-2/ ... more negative more below
+by default
+the element that is written first would go under
+the element that is written after would go over
+negative left and right is used to place elements on x-axis
+negative top and bottom is used to place elements on y-axis
+negative top z-index is used to place elements on z-axis/above or below each other
+----------BACKGROUND IMAGE------------
+Used to set an image as background
+background-image: url("image.jpeg")
+Tip: You can use unsplash to download free licensable images to avoid copyright issues
+---------BACKGROUND SIZE------------
+used to set size/pixels of image
+background-size: 
+1-cover(completely cover/fit area without any empty space. Usually we use cover because image is enhanced and cover in it)
+2-contain(completely cover/fit area without any empty space but it'll prioritize image visibility. it might get repeat in the empty space. We can use background-repeat: no repeat but still it'll leave the empty space)
+3-auto (by default image size)
+----------PRACTICE SET 5 --------------
+Qs: Create the following layout using the given html.
+Give the div a height, width and some background image.
+Use the appropriate position property for the div element to place it at the right end of the page. (The div should not move even on scroll)
+<p> lorem*5 </p>
+<div> Love Nature </div>
+<p> lorem*5 </p>
+--------------------------------LEVEL-4---------------------
+-----------FLEX BOX-----------
+Flexible box layout
+It is a one-dimensional(horizontal/vertical direction) layout method for arranging items in rows or columns.
+THE FLEX MODEL-------
+row -> left to right direction (in most cases it is main axis but not compulsory)
+column-> top to bottom direction (cross axis)
+both axis will always be 90 degree to each other
+flex-container(parent) set to display flex -> this container can be div/span/navbar/section -> placed inside (flex-items)
+display: flex; (means we have on the button to use all the flex properties)
+--------FLEXBOX DIRECTION-----------
+It sets how flex items are placed in the flex-container, along which axis and direction.
+this property is used for container and not for individual item
+HORIZONTAL DIRECTION:
+1-flex-direction: row;(default direction)----
+used for container means items/elements main axis will be row ( left to right arrangement of elements)
+2-flex-direction: row-reverse; ----
+used for container means items/elements main axis will be row ( right to left arrangement of elements)
+VERTICAL DIRECTION:
+3-flex-direction: column;----
+used for container means items/elements main axis will be column (top to bottom arrangement of elements)
+4-flex-direction: column-reverse;----
+used for container means items/elements  main axis will be column (bottom to top arrangement of elements)
+tip: flex-items will arrange their size according to the flex container. They won't get out of it(by default they will try to fit themselves in container) -> font-size or content exceed will let them get out of flex container only. This is also applied on flex-items that they'll try to fit them in flex-container as much as possible.
+---------FLEX PROPERTIES FOR FLEX CONTAINER(CONTAINER)----------
+1-JUSTIFY-CONTENT:--------
+works for both flex direction column and row wise.
+alignment along the main axis.
+flex-start means main axis start (L->R)/ flex-end means main axis end (R->L)/ center (equal space in left and right) / space-around (space will come around elements. last and first space would be half the space of other items) / space-between(extra space come  between boxes) / space-evenly(space is evenly spread. same amount of space around all elements)
+flex direction isn't changed
+justify-content: center; centers elements across main axis
+2-FLEX-WRAP:------------
+A little space remains between content
+nowrap / wrap/ wrap-reverse
+3-ALIGN-ITEMS:-------------
+alignment across the cross axis
+align-item at flex start means item will set at top but it's wrap so space will be generated when align content is set to flex-start it won't generate any space even if it's wrap-> space is at end
+align-item: center; centers elements across cross axis
+4-ALIGN-CONTENT:-----------
+alignment of space between and around the content along cross-axis.(no space remains between the content)
+when elements come in multiple line then align content works so we'll use flex-wrap for this and increase size of each div
+align content and align item bot set to center so they'll all be in center and space will be left around
+flex-start means all items are at top
+flex-end means all items are at end
+---------FLEX PROPERTIES FOR FLEX ITEMS(INDIVIDUAL)----------
+1-ALIGN-SELF:-----------
+Alignment of individual item along the cross axis
+This property will be prioritized instead of container alignment properties now for individual items.
+2:FLEX-GROW:-----------
+How much a flex item will grow relative to the rest of the flex items if space is available
+grow with the factor of 1(means equally grow)
+double/triple/5x grow
+if flex grow set to   flex-grow: 1; it means this box will occupy all the remaining space
+if flex grow set to   flex-grow: 2; it means this box will occupy double the remaining space
+3:FLEX-SHRINK:-----------
+How much a flex item will shrink relative to the rest of the flex items space is available
+shrink with the factor of 1(means equally shrink)
+double/triple/5x shrink -> flex-shrink:2(to the factor of 2)
+600/5=120 width of each -> equally shrink
+200-134 box 2 doubly shrink
+flex-shrink:0.5 (half shrink as compare to other)
+flex-shrink:0(not shrink at all)
+remaining 4px come from border (right and left border(2+2=4)
+flex-shrink:1(means by default shrink)
+----------  PRACTICE SET 6   --------------
+1-Create a navbar with 4 options in the form of anchor tags inside list items. Now, use flexbox to place them all spaced equally in a single line.
+no extra margin added this time for individual item and single line added gave output
+2-Use flexbox to center one div inside other div
+3-Which has higher priority -align-items or align-self?
+Note: CSS does cascading means what's written after will be prioritized/applied after
+------------- MEDIA QUERIES --------------
+Help create a responsive website(adapt according to screen size)
+important in CSS and a good practice
+we use website on different alignment/oriented devices -> inspect and use device toolbar icon to see website on multiple devices(website adapt/respond on different devices-width*height of screen displayed in pixels)
+Maximum media queries are written using width of the screen and not height.
+Different changes on different websites can be obtained through media queries.
+1-WIDTH--------
+on exact 600px
+ @media(width:600px){
+    div{
+        background-color: red;
+    }
+ }
+2-MIN-WIDTH------
+means width is 600px or higher change occur
+ @media(min-width: 600px){
+    div{
+        background-color: blue;
+    }
+ }
+3-MAX-WIDTH-------
+means from 0 to a certain max-width change occur
+ @media(max-width: 600px){
+    div{
+        background-color: green;
+    }
+ }
+we can also change font-sizes of text on different devices
+4-MIXED MEDIA QUERIES-------------
+we can combine media queries for different ranges
+200-300px width of screen
+ @media(min-width:200px)and(max-width:300px){
+#media{
+    background-color: blue;
+}
+ }
+----------  PRACTICE SET 7   --------------
+1- Add a media query to implement the following:
+-the color of a div changes to green for viewport width less than 300px 
+-the color of a div changes to pink for viewport width between 300px and 400px  
+-the color of a div changes to red for viewport width between 400px and 600px 
+-the color of a div changes to blue for viewport width above 600px 
+--------------------------------LEVEL-5----------------------------------
+Transition, Transform and Animation -> How to move, rotate, set size and effects of elements -> ADVANCE CSS
+------------ TRANSITIONS---------------
+Transitions enable you to define the transition(means effect) between two states of an element eg) button from normal to active state / hover (from one state to other)
+change come when moving from one state to another
+pseudo class means to define different states eg) hover state means to move cursor on it and active state means to click on it
+HOW ARE THESE CHANGES IN PROPERTY APPLIED?
+1-TRANSITION-PROPERTY: property you want to transition(font-size, width etc)
+features in the transition(slow/fast/delay in transition property)
+2-TRANSITION-DURATION:2s/ 4ms..(instantly/delay in time)
+3-TRANSITION-TIMING-FUNCTION: ease-in / ease-out / linear / steps.. (in which style effect should be applied)
+4-TRANSITION-DELAY: 2s/4ms.. (after how much time change should be applied)
+-----------TRANSITION SHORTHAND----------
+single line method to write all these
+property name| duration | timing-function | delay
+ transition: font-size/all 2s ease-in-out 0.2s;
+----------CSS TRANSFORM PROPERTY----------
+Used to apply 2D and 3D transformations to an element  /size big/small
+1-ROTATE PROPERTY-----------------
+  transform: rotate(45deg);
+90 degree rotate-> horizontal become vertical and  vertical become horizontal transform
+180 degree rotate-> mirror image
+45 degree-> half of 90 degree
+you can use radian(measurement unit)
+transform property isn't only applying on box but applied on the content too(it applies on outer and inner all elements
+prefer using these on 3D objects(particular axis about) -> explore on your own eg) cube and sphere
+rotateX:45deg;
+rotateY:45deg;
+rotateZ:45deg;
+2-SCALE PROPERTY------------------
+means to make big or small in size
+2D scaling on x and y both axis apply
+transform: scale(2);
+transform: scale(0.5);
+transform: scale(1,2);
+1D scaling applies on only one axis
+transform: scaleX(0.5);
+transform: scaleY(0.5);
+3-TRANSLATE PROPERTY---------------
+to move something or different elements on screen.We can create bouncing effect using this property
+transform: translate(20px);
+transform: translate(-200px);
+transform: translate(20px,50px);
+transform: translateX(30px);
+transform: translateY(-30px);
+4-SKEW PROPERTY----------------
+skew is a mixture of different effects
+It's like stretching something from both sides
+--------------- ANIMATION -----------------
+means to animate CSS elements (to do transform in a better way)
+template/blueprint animation name
+this structure defines the template only, for the application effects animation properties will be used.
+@keyframe myName {
+from{fontsize:20px;}
+to{font-size:40px;}
+}
+starting/initial frame and ending/last frame -> between this all exist is animation
+-------- ANIMATION PROPERTIES ------------
+These properties are almost like transform and transition properties
+1-animation-name
+to define name of animation
+2-animation-duration
+for how much time animation should last
+3-animation-timing-function
+how animation should come eg) instantly/fast/slow/steps
+4-animation-delay
+after how much time animation should come
+5-animation-iteration-count
+how many times animation should apply
+6-animation-direction
+decides that what should be direction of animation
+a-normal(from-to relation) forwards each cycle
+b-reverse(to-from relation) backwards each cycle
+c-alternate(from-to and to-from) reverses direction each cycle
+d-alternate-reverse(to-from and alternate) reverse is alternate
+-------- ANIMATION SHORTHAND ------------
+all these properties can be written in single line
+name , duration, timng-function, delay, iteration-count, direction
+animation: myName 2s linear 3s infinite normal
+-------- % IN ANIMATION ------------
+Basically animation is a process that starts(from[0%]), between[50%] and end(to[100%])
+@keyframe myName{
+0%{font-size:20px;}
+50%{font-size:30px;}
+100%{font-size:40px;}
+}
+----------  PRACTICE SET 8  --------------
+Qs- Create a simple loader using CSS
+Step1: Create a div with circular shape and a thick border from one end (top/bottom/left/right)
+Step2: To make it spin create an animation which transforms it from 0deg to 360deg
+Step3: Add the animation property to the loader with infinite duration
+Pro-tip: 1-Try out things on internet using just CSS and HTML 2-Study from MDN on your own for more information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
