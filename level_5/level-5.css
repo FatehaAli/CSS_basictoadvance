@@ -1,0 +1,124 @@
+/* ------------ TRANSITIONS--------------- */
+/* ----------CSS TRANSFORM PROPERTY---------- */
+/* --------------- ANIMATION ----------------- */
+div {
+    /* height: 200px;
+    width: 200px; */
+    /* background-color: lawngreen; */
+    border: 2px solid yellow;
+    /* top: 100px;
+    left: 100px;
+    position: absolute;
+    border-radius: 50%; */
+    /* transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-timing-function: steps;
+    transition-timing-function: steps(5);
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
+    transition-timing-function: cubic;
+    transition-delay: 2s;
+    transition: all 2s ease-in-out 0.2s; */
+    /* transform: rotate(45deg);
+    transform:rotate(90deg);
+    transform: rotate(180deg);
+    transform: rotate(360deg);
+    /* rotate: x 90deg;
+    rotate: y 90deg;
+    rotate: z 90deg;
+    rotate: x 180deg; */
+    /* transform: scale(1);
+    transform: scale(2);
+    transform: scale(0.5);
+    transform: scale(1,2);
+    transform: scaleX(0.5); */
+    /* animation-name: colorAnimation; */
+    /* animation-name: positionAnimation;
+    animation-duration: 3s;
+    animation-duration: 0.25s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s; */
+    /* animation-iteration-count: 5; */
+    /* animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-direction: reverse;
+    animation-direction: alternate;
+    animation-direction: alternate-reverse;
+    animation: positionAnimation 4s ease-in 1s infinite normal; */
+
+}
+
+/* @keyframes colorAnimation {
+    from {background-color: aquamarine;}
+    to{background-color: palevioletred;}
+} */
+/* @keyframes positionAnimation {
+    from {
+        left: 0px;
+        background-color: yellow;
+    }
+
+    to {
+        left: 200px;
+        background-color: red;
+        color: blueviolet;
+    }
+} */
+/* @keyframes positionAnimation {
+    0% {
+        left: 0px;
+        background-color: yellow;
+    }
+
+    30% {
+        background-color: mediumspringgreen;
+    }
+
+    50% {
+        background-color: pink;
+    }
+
+    80% {
+        background-color: teal;
+    }
+
+    100% {
+        left: 200px;
+        background-color: red;
+        color: blueviolet;
+    }
+} */
+
+div:hover {
+    /* background-color: brown; */
+    color: white;
+    font-size: 20px;
+    /* transform: scaleY(0.5);
+    transform: rotate(180deg);
+    transform: translate(200px);
+    transform: translate(-200px);
+    transform: translate(20px,50px);
+    transform: translateX(30px);
+    transform: translateY(-300px);
+    transform: skew(30deg);
+    transform: skew(90deg); */
+}
+
+div:active {
+    background-color: pink;
+}
+/* ----------  PRACTICE SET 8  -------------- */
+.loader{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+   border-left: 5px solid palevioletred;
+  animation: spinAnimate 2s ease-in-out 1s infinite normal;
+
+}
+@keyframes spinAnimate{
+    from{ transform: rotate(0deg);}
+    to{   transform: rotate(360deg);}
+}
