@@ -1,0 +1,150 @@
+/* ------BOX MODEL IN CSS--------- */
+/* a- Height */
+/* div{
+    height: 100px;
+    background-color: pink;
+} */
+/* b-Width */
+/* h1{
+    width: 200px;
+    background-color: aquamarine;
+    border-style: dotted;
+    text-align: center;
+} */
+/* c-Border */
+/* div{
+    border-width: 5px;
+    border-style: solid;
+    border-style: dashed;
+    border-style: dotted;
+    border-style: double;
+    border-color: purple;
+    text-align: right;
+    border: 2px solid brown;
+    border-radius: 15px;
+}
+#div-2{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+} */
+/* 4-padding */
+/* #div-3{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: start;
+    padding: 50px;
+    padding: 2px 3px 4px 5px;
+} */
+/* 5-margin  */
+/* #div-4{
+    margin-top: 50px;
+    margin-bottom: 45px;
+    margin: 60px;
+    margin: 10px 20px 30px 40px;
+} */
+/* --------PRACTICE SET 3--------- */
+/* #pr-div{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 50%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+#navbar{
+height: 60px;
+background-color: #0f1111;
+}
+button{
+    background-color: #f08804;
+}
+#logo{
+    color: #f08804;
+    font-size: 25px;
+}
+a{
+    margin-right: 200px;
+    text-decoration: none;
+} */
+/* ------DISPLAY AND VISIBILITY--------- */
+/* #display{
+    background-color: aquamarine;
+    display: inline;
+}
+button{
+    display: block;
+}
+div{
+    width: 200px;
+    height: 200px;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+}
+#one{
+    background-color: blue;
+    visibility: hidden;
+}
+#two{
+    background-color: green;
+    display: none;
+}
+#three{
+    background-color: red;
+} */
+ /* ---------ALPHA CHANNEL---------- */
+/* #alpha{
+    background-color: rgba(255,0,0,0.1);
+    background-color: rgba(255,0,0,0.25);
+    color: rgba(255,0,0,0.75);
+    color: rgba(255,0,0,1);
+} */
+/* --------PRACTICE SET 4--------- */
+*{
+    padding: 0;
+    margin: 0;
+}
+#content{
+    height: 650px;
+}
+.content-box{
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+    display: inline-block;
+}
+#navbar{
+    background-color: #0f1111;
+    height: 60px;
+}
+button{
+    background-color: #f08804;
+}
+#logo{
+    color: #f08804;
+    font-size: 25px;
+}
+a{
+    margin-right: 200px;
+    text-decoration: none;
+}
+#one{
+    background-color: rgba(255, 0, 0, 0.5);
+}
+#two{
+    background-color: rgba(0, 255, 0, 0.5);
+}
+#three{
+    background-color: rgba(0, 0, 255, 0.5);
+}
+footer{
+   color: #fff;
+   background-color: #0f1111;
+   text-align: center;
+}
