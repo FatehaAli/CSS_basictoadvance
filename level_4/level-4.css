@@ -1,0 +1,134 @@
+/* -----------FLEX-BOX------------ */
+body{
+    text-align: center;
+}
+div{
+    height: 100px;
+    width: 50px;
+    display: inline-block;
+    border: 2px solid black;
+}
+#container{
+    width: 700px;
+    height: 300px;
+   display: flex;
+   flex-direction: row-reverse;
+   flex-direction: column-reverse;
+   flex-direction: column;
+   flex-direction: row;
+   justify-content: flex-start;
+   justify-content: flex-end;
+   justify-content: center;
+   justify-content: space-around;
+   justify-content: space-between;
+   justify-content: space-evenly;
+   /* flex-wrap: wrap;  */
+   align-items: center;
+   align-items: flex-end;
+   align-items: flex-start;
+   align-content: center;
+   align-content: flex-start;
+   align-content: flex-end;
+}
+#box-1{
+    background-color: bisque;
+    flex-grow: 1;
+}
+#box-2{
+    background-color: aqua;
+    height: 200px;
+    /* align-self: flex-end; */
+    /* flex-shrink: 2; */
+    flex-grow: 2;
+}
+#box-3{
+    background-color: plum;
+    height: 75px;
+}
+#box-4{
+    background-color: indianred;
+}
+#box-5{
+    background-color: palevioletred;
+    /* align-self: flex-start; */
+}
+/* ------------ PRACTICE SET 6 ----------  */
+ /* nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: azure;
+    text-transform: none;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+    background-color: bisque;
+    display: inline;
+}
+#parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: palevioletred;
+    width: 400px;
+    height: 400px;
+}
+#child{
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    align-self: flex-start;
+ } */
+ /* ------------- MEDIA QUERIES -------------- */
+ /* #media{
+    height: 100px;
+    width: 50px;
+ }
+ @media(min-width: 600px){
+    #media{
+        background-color: pink;
+    }
+ }
+ @media(max-width:600px){
+    #media{
+        background-color: green;
+    }
+ }
+ @media(min-width: 600px){
+    #media{
+        background-color: blue;
+        font-size: small;
+    }
+ }
+ @media(min-width:200px)and(max-width:300px){
+#media{
+    background-color: powderblue;
+}
+ } */
+ /* ----------  PRACTICE SET 7   -------------- */
+.practice{
+     background-color: purple; 
+    width: 400px;
+    height: 400px;
+}
+@media(max-width:300px){
+     .practice{
+    background-color: green;
+}
+}
+@media (min-width: 300px) and (max-width: 400px){
+    .practice{
+        background-color: pink;
+    }
+    }
+    @media (min-width: 400px) and (max-width: 600px){
+        .practice{
+            background-color: red;
+        }
+        }
+        @media(min-width:600px){
+         .practice{
+                background-color: blue;
+            }
+            } 
+            
